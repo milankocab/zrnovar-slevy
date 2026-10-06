@@ -1,0 +1,55 @@
+{
+  "payload": {
+    "export": "cart-lines-discounts-generate-run",
+    "target": "cart.lines.discounts.generate.run",
+    "input": {
+      "cart": {
+        "buyerIdentity": {
+          "purchasingCompany": null
+        },
+        "lines": [
+          {
+            "id": "gid://shopify/CartLine/0",
+            "quantity": 1,
+            "cost": {
+              "amountPerQuantity": {
+                "amount": "329.0"
+              }
+            },
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "product": {
+                "id": "gid://shopify/Product/2",
+                "productType": "Zrnková káva",
+                "isBlend": false
+              }
+            }
+          },
+          {
+            "id": "gid://shopify/CartLine/1",
+            "quantity": 1,
+            "cost": {
+              "amountPerQuantity": {
+                "amount": "249.0"
+              }
+            },
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "product": {
+                "id": "gid://shopify/Product/1",
+                "productType": "Zrnková káva",
+                "isBlend": false
+              }
+            }
+          }
+        ]
+      },
+      "discount": {
+        "discountClasses": []
+      }
+    },
+    "output": {
+      "operations": []
+    }
+  }
+}

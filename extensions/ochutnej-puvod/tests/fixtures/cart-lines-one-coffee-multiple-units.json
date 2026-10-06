@@ -1,0 +1,40 @@
+{
+  "payload": {
+    "export": "cart-lines-discounts-generate-run",
+    "target": "cart.lines.discounts.generate.run",
+    "input": {
+      "cart": {
+        "buyerIdentity": {
+          "purchasingCompany": null
+        },
+        "lines": [
+          {
+            "id": "gid://shopify/CartLine/0",
+            "quantity": 3,
+            "cost": {
+              "amountPerQuantity": {
+                "amount": "249.0"
+              }
+            },
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "product": {
+                "id": "gid://shopify/Product/1",
+                "productType": "Zrnková káva",
+                "isBlend": false
+              }
+            }
+          }
+        ]
+      },
+      "discount": {
+        "discountClasses": [
+          "PRODUCT"
+        ]
+      }
+    },
+    "output": {
+      "operations": []
+    }
+  }
+}
