@@ -1,6 +1,6 @@
 # Zrnovar – sleva „Ochutnej nový původ“
 
-Shopify aplikace se slevovou funkcí ([Shopify Functions](https://shopify.dev/docs/apps/build/functions), Discount API) pro e-shop pražírny Zrnovar.
+Shopify aplikace se slevovou funkcí ([Shopify Functions](https://shopify.dev/docs/apps/build/functions), Discount API) pro e-shop fiktivní pražírny Zrnovar.
 
 ## Co sleva dělá
 
