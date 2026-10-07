@@ -17,9 +17,15 @@ Kavárny objednávají u Zrnovaru přes Shopify B2B každý týden skoro totéž
 ## 2. Cíle
 
 - **Kavárna** objedná obvyklé zboží rychle a bez chyb.
-- **Zrnovar** má pravidelné B2B objednávky a včas pozná zákazníka, který přestal objednávat.
+- **Zrnovar** má pravidelné a předvídatelné B2B tržby, méně expresních dodání po zapomenuté objednávce a včas pozná zákazníka, který přestal objednávat, dřív než odejde ke konkurenci.
 
-**Měření.** Objednávky ze stálé objednávky dostanou štítek `standing-order`. Jejich počet uvidíme v adminu filtrem objednávek podle štítku. Rychlost objednání ani úspěšnost připomínek Shopify nezměří, proto je v této fázi nesledujeme.
+**Cíl (SMART).** Do 3 měsíců od spuštění bude alespoň 30 % B2B objednávek pocházet ze stálé objednávky (štítek `standing-order`). Hodnotu 30 % potvrdíme s klientem.
+
+**Měření.**
+
+- **Využití.** Objednávky ze stálé objednávky dostanou štítek `standing-order`. Jejich počet uvidíme v adminu filtrem objednávek podle štítku.
+- **Úspěšnost připomínek.** Otevření a prokliky ukáže nástroj, který připomínky posílá (marketingová automatizace Shopify nebo Klaviyo). Lokace, které po připomínce neobjednaly, zachytí Flow pro upozornění obchodníka (kapitola 4.1).
+- **Rychlost objednání** Shopify nezměří, proto ji v této fázi nesledujeme.
 
 > **Otázka pro vývoj:** Jde v Shopify Analytics vytvořit report s podílem objednávek se štítkem `standing-order` na všech B2B objednávkách? Pokud ne, budeme podíl počítat ručně z filtru.
 
@@ -144,7 +150,7 @@ Bez vývoje, jen nastavením:
 | Potřeba | Řešení v Shopify | Stav |
 |---|---|---|
 | Velkoobchodní ceny | B2B katalog Velkoobchod Gastro (−15 %) | hotovo |
-| Minimální odběr, balení po 6 kg, množstevní ceny | pravidla množství v katalogu, checkout je vynutí | hotovo |
+| Minimální odběr 6 kg, množstevní ceny od 12 a 24 kg | pravidla množství v katalogu, checkout je vynutí | hotovo |
 | Platba na fakturu | platební podmínky Net 30 | hotovo |
 | Kontrola objednávky obchodníkem (pokud ji klient bude chtít) | objednávky lokace chodí jako koncept | dle potřeby |
 | Označení objednávek ze stálé objednávky | Flow: Order created → má atribut `source: standing-order` → štítek `standing-order` | nastavit |
@@ -155,7 +161,7 @@ Bez vývoje, jen nastavením:
 
 ### 4.2 Co vytvoříme
 
-Shopify nemá uloženou šablonu objednávky a hotová aplikace z App Store naše požadavky nesplňuje. Stálou objednávku proto vyvineme jako vlastní aplikaci.
+Shopify nemá uloženou šablonu objednávky. Buy again umí objednávku zopakovat, ale zákazník ji musí nejdřív dohledat v historii, a na to často nemá čas ani chuť. Stálá objednávka mu dá na jednom místě přehled o tom, co pravidelně objednává. Hotová aplikace z App Store naše požadavky nesplňuje, proto stálou objednávku vyvineme jako vlastní aplikaci.
 
 **Návrh technického řešení** (finální podobu určí vývoj):
 
